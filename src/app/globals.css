@@ -18,13 +18,13 @@ body {
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
+    --muted: 174, 61%, 19%;
     --muted-foreground: 0 0% 45.1%;
     --accent: 0 0% 96.1%;
     --accent-foreground: 0 0% 9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
+    --border: 218, 13%, 88%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
     --chart-1: 12 76% 61%;
@@ -39,7 +39,7 @@ body {
     --sidebar-primary-foreground: 165, 85%, 89%;
     --sidebar-accent: 0, 0%, 100%;
     --sidebar-accent-foreground: 174, 69%, 22%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: var(--border);
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
@@ -47,6 +47,23 @@ body {
 @layer base {
   * {
     @apply border-border;
+  }
+  .logo-container {
+    background: 
+      linear-gradient(222.7deg, rgba(63, 220, 205, 0.81) 2.39%, #09544d 99.83%);
+
+    border: 0.4px solid;
+
+    border-image-source: linear-gradient(
+      180deg,
+      #33f7e4 0%,
+      rgba(5, 29, 27, 0) 100%
+    );
+
+    box-shadow: 0px -3.6px 8.28px 0px #47978f inset;
+    border-radius: 5.2px;
+    height: 33.2px;
+    width: 33.2px;
   }
   body {
     @apply bg-background text-foreground;
