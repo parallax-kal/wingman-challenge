@@ -80,10 +80,10 @@ const HomeSummary = () => {
               </SelectContent>
             </Select>
           </div>
-          <div className="grid gap-5 grid-cols-3 px-3 py-4">
-            {glances.map((glance,) => (
+          <div className="grid gap-5 grid-cols-3 py-4">
+            {glances.map((glance, index) => (
               <div
-                className="flex p-5 rounded-[20px] flex-col summary-container"
+                className="flex p-5 gap-2 rounded-[20px] flex-col summary-container"
                 key={glance.title}
               >
                 <div className="flex items-center gap-2">
@@ -93,7 +93,11 @@ const HomeSummary = () => {
                   </div>
                 </div>
                 <div className="text-accent-foreground font-medium text-[32px] leading-[38.4px]">
-                  {glance.total}
+                  {index > 2
+                    ? `$${glance.total}`
+                    : index === 2
+                    ? `${glance.total}%`
+                    : glance.total}
                 </div>
                 <div className="flex gap-2 items-center">
                   {glance.type === "increase" ? (
@@ -101,8 +105,12 @@ const HomeSummary = () => {
                   ) : (
                     <DownTrendIcon className="text-accent" />
                   )}
-                  <span className="text-destructive-foreground text-[14px] leading-[21.98px]">{glance.value}%</span>
-                  <span className="text-card-foreground text-[14px] leading-[21.98px]">{glance.type}</span>
+                  <span className="text-destructive-foreground text-[14px] leading-[21.98px]">
+                    {glance.value}%
+                  </span>
+                  <span className="text-card-foreground text-[14px] leading-[21.98px]">
+                    {glance.type}
+                  </span>
                 </div>
               </div>
             ))}
