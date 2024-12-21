@@ -14,6 +14,7 @@ import ChatTearDropIcon from "@/assets/chat_tear_drop_short.svg";
 import TagIcon from "@/assets/tag_short.svg";
 import UpTrendIcon from "@/assets/up_trend.svg";
 import DownTrendIcon from "@/assets/down_trend.svg";
+import { SummaryConsultationChart } from "./summary-consultations-chart";
 
 const glances = [
   {
@@ -114,6 +115,21 @@ const HomeSummary = () => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-3 pt-3">
+          <div className="text-accent-foreground font-medium text-[32px] leading-[38.4px]">
+            Insights
+          </div>
+          <div className="flex justify-between gap-3">
+            <div className="flex summary-container flex-col">
+              <div className="flex items-center gap-2">
+                <ChatTearDropIcon />
+                <div className="uppercase"> CONsultations</div>
+              </div>
+              <SummaryConsultationChart />
+            </div>
+            <div className="flex flex-col summary-container"></div>
           </div>
         </div>
       </div>
