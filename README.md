@@ -39,7 +39,7 @@ While the core structure is functional, there are a few tasks that remain unfini
 5. Visit `http://localhost:3000` to view the application.  
 
 ## Deployment  
-The project has been deployed to Vercel. You can view it here: [Deployed URL](#)  
+The project has been deployed to Vercel. You can view it here: [Deployed URL](https://wingman-challenge.vercel.app/)  
 
 ## Reflection  
 Although I couldn't complete all the features due to a busy schedule today, I am proud of the progress made in a short timeframe. I look forward to improving and expanding the project further.  
@@ -51,4 +51,4 @@ Although I couldn't complete all the features due to a busy schedule today, I am
 - Vercel (Deployment)  
 
 ## Repository  
-You can find the code for this project here: [GitHub Repository](#)  
+You can find the code for this project here: [GitHub Repository](https://github.com/parallax-kal/wingman-challenge)
