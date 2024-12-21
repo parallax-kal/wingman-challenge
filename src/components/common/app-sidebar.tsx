@@ -28,12 +28,12 @@ const items = [
   },
   {
     title: "Chat",
-    url: "/chat",
+    url: "/",
     icon: ChatIcon,
   },
   {
     title: "Users",
-    url: "/users",
+    url: "/",
     icon: Users4Icon,
   },
 ];
@@ -68,7 +68,7 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter className="pb-6 items-center">
-        <Link href="/settings">
+        <Link href="/">
           <GearIcon className="text-sidebar-foreground" />
         </Link>
       </SidebarFooter>
