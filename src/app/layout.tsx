@@ -32,7 +32,7 @@ export default function RootLayout({
       >
           <SidebarProvider open={false}>
             <AppSidebar />
-            <main>
+            <main className="w-full">
               <AppNavbar />
               {children}
             </main>

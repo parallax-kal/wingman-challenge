@@ -20,7 +20,7 @@ import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import GearIcon from "@/assets/gear.svg";
 
-const items = [
+const navs = [
   {
     title: "Home",
     url: "/",
@@ -28,12 +28,12 @@ const items = [
   },
   {
     title: "Chat",
-    url: "/",
+    url: "/chat",
     icon: ChatIcon,
   },
   {
     title: "Users",
-    url: "/",
+    url: "/users",
     icon: Users4Icon,
   },
 ];
@@ -50,15 +50,15 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu className="items-center">
-              {items.map((item) => (
-                <SidebarMenuItem key={item.title}>
+              {navs.map((nav) => (
+                <SidebarMenuItem key={nav.title}>
                   <SidebarMenuButton
-                    data-active={item.url === pathname}
+                    data-active={nav.url === pathname}
                     asChild
                   >
-                    <Link href={item.url}>
-                      <item.icon />
-                      <span>{item.title}</span>
+                    <Link href={nav.url}>
+                      <nav.icon />
+                      <span>{nav.title}</span>
                     </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
