@@ -11,7 +11,7 @@ body {
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 221, 13%, 46%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
@@ -23,7 +23,7 @@ body {
     --accent: 165, 85%, 89%;
     --accent-foreground: 226, 24%, 17%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 4, 86%, 58%;
     --border: 218, 13%, 88%;
     --input: 0 0% 89.8%;
     --ring: 0 0% 3.9%;
@@ -48,22 +48,9 @@ body {
   * {
     @apply border-border;
   }
-  .logo-container {
-    background: 
-      linear-gradient(222.7deg, rgba(63, 220, 205, 0.81) 2.39%, #09544d 99.83%);
-
-    border: 0.4px solid;
-
-    border-image-source: linear-gradient(
-      180deg,
-      #33f7e4 0%,
-      rgba(5, 29, 27, 0) 100%
-    );
-
-    box-shadow: 0px -3.6px 8.28px 0px #47978f inset;
-    border-radius: 5.2px;
-    height: 33.2px;
-    width: 33.2px;
+  .summary-container {
+    box-shadow: 0px 5px 22px 0px hsla(0, 0%, 0%, 0.04);
+    box-shadow: 0px 0px 0px 1px hsla(0, 0%, 0%, 0.06);
   }
   body {
     @apply bg-background text-foreground;
